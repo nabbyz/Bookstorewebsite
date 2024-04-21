@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="backbutton">
+        <a href="index.html" class="backbutton"><i class="fa-solid fa-angle-left"></i></a>
+        
+    </div>
+    <div class="login-container">
+        <div class="elementlogin">
+            
+        <form class="login-form">
+            <h1>SIGN IN</h1>
+            <label class="username" for="username">Email / Mobile Number</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <span class="show-password" onclick="togglePassword()">Show Password</span>
+            </div>
+
+            <div class="options">
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

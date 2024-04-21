@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kittymark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="stylecart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border" id="homeButton" onclick="openhomePage()">
+                <img src="logo.png" alt="Logo" class="logo">
+                <div class="nav-logo_text border">
+                <img src="logo_text1.png" alt="Logo_text" class="logo_text">
+                
+            </div>
+                
+            </div>
+            
+            
+            <div class="nav-address">
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="address-text">
+                    <p class="add-first">Deliver To</p>
+                    <p class="add-second">Kolkata 700001</p>
+                </div>
+            </div>
+            
+            
+            
+            <div class="nav-search">
+                <select>
+                    <option>All</option>
+                    <option>Fiction</option>
+                    <option>Non-Fiction</option>
+                    <option>Education</option>
+                    <option>Children</option>
+                    <option>Horror</option>
+                </select>
+                <input type="text" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-signin">
+                
+                
+                <button type="button" id="loginButton" onclick="openLoginPage()">SIGN IN</button>
+
+                
+            </div>
+
+            <div class="nav-return" id="returnButton" onclick="openreturnPage()">
+                <a1 href="Explore.html">Return</a1>
+                <a2 href="Explore.html">& Orders</a2>
+            </div>
+            <div class="nav-cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <a href="cart.html">
+                    <p class="cart-text">View Cart</p>
+                </a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                <p> All</p>
+            </div>
+            <div class="panel-ops">
+                <p>Hot Deals</p>
+                <p>Customer Service</p>
+                <p>Kitty Pay</p>
+                <p>Gift Cards</p>
+                <p>Sell</p>
+                <p>Prime</p>
+
+            </div>
+            <div class="panel-deals">
+                <p>Find Deals in Romance</p>
+
+            </div>
+        </div>
+        </header>
+        
+        <div class="cart-container">
+            <a>YOUR CART</a>
+            <div class="product-box">
+                <img class="product-img" src="prod-img10.jpg" alt="Product 3">
+                <h2>Love Redesigned</h2>
+                <p class="product-details">Author: Lauren Asher</p>
+                <p class="product-description">A captivating story that will redefine your perception of love.</p>
+                <p class="product-price">$9.99</p>
+                <button onclick="removeFromCart()">Remove from Cart</button>
+            </div>
+    
+            <div class="product-box">
+                <img class="product-img" src="prod-img9.jpg" alt="Product 3">
+                <h2>Practice Makes Perfect</h2>
+                <p class="product-details">Author: Sarah Admas</p>
+                <p class="product-description">A captivating story that will redefine your perception of love.</p>
+                <p class="product-price">$9.99</p>
+                <button onclick="removeFromCart()">Remove from Cart</button>
+            </div>
+            <div class="product-box">
+                <img class="product-img" src="prod-img8.jpg" alt="Product 3">
+                <h2>Tommorow and Tommorow and Tomorrow</h2>
+                <p class="product-details">Author: Gabrielle Zevin</p>
+                <p class="product-description">A captivating story that will redefine your perception of love.</p>
+                <p class="product-price">$9.99</p>
+                <button onclick="removeFromCart()">Remove from Cart</button>
+            </div>
+            <div class="product-box">
+                <img class="product-img" src="prod-img7.jpg" alt="Product 3">
+                <h2>Happy Place</h2>
+                <p class="product-details">Author: Emily Henry</p>
+                <p class="product-description">A captivating story that will redefine your perception of love.</p>
+                <p class="product-price">$9.99</p>
+                <button onclick="removeFromCart()">Remove from Cart</button>
+            </div>
+    
+            <div class="cart-summary">
+                <h2>Cart Summary</h2>
+                <p>Total Items: 4</p>
+                <p>Total Price: $39.96</p>
+                <button onclick="checkout()">Proceed to Checkout</button>
+            </div>
+    
+        </div>
+
+        <div class="sidebar" id="sidebar">
+            <!-- Close button for the sidebar -->
+            <span class="close-btn" onclick="closeSidebar()">&#10006;</span>
+            <div class="sign">
+            <a href="login.html">Hello Sign In</a>
+            </div>
+            <a href="#">Trending</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">New Releases</a>
+            <a href="#">Digital Content and Devices</a>
+            <hr>
+            <a href="#">Shop by Category</a>
+            <a href="#">See all</a>
+            <hr>
+            <a href="#">Help & Settings</a>
+            <a href="#">Your Account</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Sign Out</a>
+        </div>
+        <script>
+            function openLoginPage() {
+            // Redirect to login.html
+            window.location.href = 'login.html';
+                }  
+                
+                function openhomePage() {
+                // Redirect to home.html
+                window.location.href = 'index.html';
+            }
+
+            function toggleSidebar() {
+                var sidebar = document.getElementById("sidebar");
+                sidebar.style.display = (sidebar.style.display === "block") ? "none" : "block";
+            }
+
+            // Function to close the sidebar
+            function closeSidebar() {
+                var sidebar = document.getElementById("sidebar");
+                sidebar.style.display = "none";
+            }
+
+            // Add an event listener to the element with class "panel-all"
+            var panelAllElement = document.querySelector('.panel-all');
+            if (panelAllElement) {
+                panelAllElement.addEventListener('click', toggleSidebar);
+            }
+
+            function removeFromCart() {
+                alert("Product removed from the shopping cart.");
+            }
+            function openreturnPage() {
+                // Redirect to return.html
+                window.location.href = 'return.html';
+            }
+        </script>
+    </body>
+</html>
